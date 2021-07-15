@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bookshelf Apps">
+    <meta name="keywords" content="HTML, CSS, JavaScript, DOM, LocalStorage">
+    <meta name="author" content="Andry Pebrianto">
+    <title>Bookshelf Apps</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="loading">
+        <h1>Loading...</h1>
+    </div>
+
+    <header hidden>
+        <nav>
+            <h2><a href="https://bookshelf-andry.netlify.app">Bookshelf Apps</a></h2>
+        </nav>
+    </header>
+
+    <main hidden>
+        <section class="add-book card-shadow">
+            <p class="add-title">Masukkan Buku Baru</p>
+            <form action="#" id="form-add">
+                <!-- Input Judul -->
+                <label for="title">Judul</label>
+                <br>
+                <input type="text" name="title" id="title" required autofocus>
+
+                <!-- Input Penulis -->
+                <label for="author">Penulis</label>
+                <br>
+                <input type="text" name="author" id="author" required>
+
+                <!-- Input Tahun -->
+                <label for="year">Tahun</label>
+                <br>
+                <input type="number" name="year" id="year" required>
+
+                <!-- Checkbox Selesai Dibaca -->
+                <label for="complete">Selesai Dibaca</label>
+                <input type="checkbox" name="complete" id="complete" value="true">
+
+                <!-- Submit Button -->
+                <button type="submit" class="button submit">Masukkan Buku ke rak <b>Belum selesai dibaca</b></button>
+            </form>
+        </section>
+        <section class="container-flex">
+            <div class="flex-item uncomplete card-shadow">
+                <p class="uncomplete-title">Belum Selesai Dibaca</p>
+                <div class="uncomplete-list"></div>
+            </div>
+            <br>
+            <div class="flex-item complete card-shadow">
+                <p class="complete-title">Selesai Dibaca</p>
+                <div class="complete-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer hidden>
+        <p>Belajar Membuat Front-End Web untuk Pemula &copy; 2021 By
+            <a href="https://web.facebook.com/andry.pebrianto/" target="_blank" rel="noreferrer">
+                Andry Pebrianto
+            </a>
+        </p>
+        <div>
+            <button class="dark-mode dark-button">Gelap</button>
+            /
+            <button class="dark-mode light-button">Terang</button>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/dark.mode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+  background-color: #f7f7f7;
+  font-family: "Noto Sans", Helvetica, sans-serif;
+}
+
+body.dark-theme {
+  background-color: #1b1b32;
+  color: white;
+}
+
+/* Loading */
+.loading {
+  z-index: 9;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  color: black;
+  transition: 0.5s;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f9f9;
+}
+
+.loading.dark-theme {
+  color: #f4f9f9;
+  background-color: #1b1b32;
+}
+/* End Loading */
+
+/* Nav */
+nav {
+  padding: 1px;
+  text-align: center;
+  background-color: #5c33f6;
+}
+
+nav h2 a {
+  color: white;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+nav h2 a:hover {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(83, 51, 202);
+}
+/* End Nav */
+
+/* Main */
+
+/* Add Book */
+.add-book {
+  padding: 15px;
+  max-width: 550px;
+  font-weight: bold;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 0.15em solid #2b2b2b;
+}
+
+.add-book.dark-theme {
+  border: 0.1em solid white;
+  background-color: #0a0a23;
+}
+
+.add-book form {
+  margin-bottom: 5px;
+}
+
+.add-book input {
+  outline: 0;
+  border: none;
+  width: 100%;
+  padding: 7px;
+  margin-top: 5px;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 0.12em solid #2b2b2b;
+}
+
+.add-book input#complete {
+  width: 20px;
+  margin-bottom: 20px;
+}
+
+.submit {
+  width: 100%;
+  background-color: #7a58f5;
+}
+
+.submit:hover {
+  background-color: #6549c9;
+}
+
+.submit:active {
+  background-color: #563fa8;
+}
+/* End Add Book */
+
+/* Container Flex */
+.container-flex {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.flex-item {
+  padding: 15px;
+  margin: 0 auto;
+  flex-basis: 50%;
+  max-width: 600px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 0.15em solid #2b2b2b;
+}
+
+.flex-item.dark-theme {
+  border: 0.1em solid white;
+  background-color: #0a0a23;
+}
+
+.item-list {
+  padding: 10px;
+  transition: 0.2s;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 0.12em solid #2b2b2b;
+}
+
+.item-list.dark-theme {
+  border: 0.1em solid white;
+  background-color: #2a2a40;
+}
+
+.item-list:hover {
+  transform: scale(1.01);
+}
+
+.item-list .item-list-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.item-list p {
+  margin-top: 5px;
+  font-size: 15px;
+  margin-bottom: 5px;
+  font-weight: lighter;
+}
+
+.nothing {
+  padding: 7px;
+  margin-top: 0px;
+  border-radius: 5px;
+  display: inline-block;
+  border: 0.12em solid #2b2b2b;
+}
+
+.nothing.dark-theme {
+  border: 0.1em solid white;
+  background-color: #2a2a40;
+}
+
+.success {
+  margin-top: 10px;
+  background-color: #2aac57;
+}
+
+.success:hover {
+  background-color: rgb(39, 145, 76);
+}
+
+.success:active {
+  background-color: #1b833f;
+}
+
+.danger {
+  background-color: #be2e2e;
+}
+
+.danger:hover {
+  background-color: #a72323;
+}
+
+.danger:active {
+  background-color: #961d1d;
+}
+
+.primary {
+  margin-top: 10px;
+  background-color: #185adb;
+}
+
+.primary:hover {
+  background-color: #134bb9;
+}
+
+.primary:active {
+  background-color: #1644a0;
+}
+/* End Container Flex */
+
+/* Generic */
+.add-title,
+.complete-title,
+.uncomplete-title {
+  margin-top: 5px;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.card-shadow {
+  box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+  text-align: center;
+  border-radius: 5px;
+}
+/* End Generic */
+
+/* End Main */
+
+/* Footer */
+footer {
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(240, 240, 240);
+  background-color: #7a58f5;
+}
+
+footer a {
+  color: white;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+footer a:hover {
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: underline;
+  background-color: #5c46a8;
+}
+
+.dark-mode {
+  padding: 7px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.dark-mode:hover {
+  padding: 9px;
+}
+
+.dark-mode.light-button {
+  color: black;
+  background-color: #dad9e0;
+}
+
+.dark-mode.dark-button {
+  color: white;
+  background-color: #242635;
+}
+/* End Footer */
+
+/* Media Query */
+/* Screen di bawah 1300px */
+@media screen and (max-width: 1210px) {
+  .container-flex {
+    flex-direction: column;
+  }
+
+  .flex-item {
+    width: 95%;
+  }
+}
+
+/* Screen di bawah 615px */
+@media screen and (max-width: 575px) {
+  .add-book {
+    margin: 20px 10px;
+  }
+}
+/* End Media Query */
