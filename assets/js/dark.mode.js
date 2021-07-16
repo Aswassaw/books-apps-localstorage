@@ -20,6 +20,7 @@ if (typeof (Storage) !== "undefined") {
         localStorage.setItem('tema', 'dark');
         document.body.classList.add('dark-theme');
         document.querySelector('.add-book').classList.add('dark-theme');
+        document.querySelector('.search-book').classList.add('dark-theme');
 
         const flexItem = document.querySelectorAll('.flex-item');
         for (let item of flexItem) {
@@ -42,6 +43,7 @@ if (typeof (Storage) !== "undefined") {
         localStorage.removeItem('tema');
         document.body.classList.remove('dark-theme');
         document.querySelector('.add-book').classList.remove('dark-theme');
+        document.querySelector('.search-book').classList.remove('dark-theme');
 
         const flexItem = document.querySelectorAll('.flex-item');
         for (let item of flexItem) {

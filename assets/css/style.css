@@ -8,7 +8,7 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   transition: 0.3s;
-  background-color: #f7f7f7;
+  background-color: #ececec;
   font-family: "Noto Sans", Helvetica, sans-serif;
 }
 
@@ -63,8 +63,9 @@ nav a:hover {
 
 /* Main */
 
-/* Add Book */
-.add-book {
+/* Add Book dan Search Book */
+.add-book,
+.search-book {
   padding: 15px;
   max-width: 550px;
   font-weight: bold;
@@ -73,16 +74,17 @@ nav a:hover {
   border: 0.15em solid #2b2b2b;
 }
 
-.add-book.dark-theme {
+.add-book.dark-theme,
+.search-book.dark-theme {
   border: 0.1em solid white;
   background-color: #0a0a23;
 }
 
-.add-book form {
+form {
   margin-bottom: 5px;
 }
 
-.add-book input {
+input {
   outline: 0;
   border: none;
   width: 100%;
@@ -111,6 +113,14 @@ nav a:hover {
 
 .submit:active {
   background-color: #563fa8;
+}
+
+.flex-search-input {
+  flex-grow: 3;
+}
+
+.flex-search-button {
+  flex-grow: 1;
 }
 /* End Add Book */
 
@@ -203,6 +213,7 @@ nav a:hover {
 }
 
 .primary {
+  width: 100%;
   margin-top: 10px;
   background-color: #185adb;
 }
@@ -218,6 +229,7 @@ nav a:hover {
 
 /* Generic */
 .add-title,
+.search-title,
 .complete-title,
 .uncomplete-title {
   margin-top: 5px;
@@ -306,7 +318,8 @@ footer a:hover {
 
 /* Screen di bawah 615px */
 @media screen and (max-width: 575px) {
-  .add-book {
+  .add-book,
+  .search-book {
     margin: 20px 10px;
   }
 }

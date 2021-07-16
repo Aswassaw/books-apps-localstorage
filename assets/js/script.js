@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
 });
 
 // Load data buku
-function loadData() {
+function loadData(search = false) {
     // Membersihkan rak buku
     const uncompleteList = document.querySelector('.uncomplete-list');
     const completeList = document.querySelector('.complete-list');
@@ -23,6 +23,13 @@ function loadData() {
     const dark = document.body.classList.contains('dark-theme');
     // Mengambil semua data buku dari local storage
     let allBookData = JSON.parse(localStorage.getItem('book-data'));
+
+    // Memfilter hasil jika ada pencarian
+    if (search) {
+        allBookData = allBookData.filter((item) => {
+            return item.title === search;
+        })
+    }
 
     let completeCount = 0;
     let uncompleteCount = 0;
@@ -160,6 +167,7 @@ document.querySelector('.container-flex').addEventListener('click', (e) => {
             }
         })
     } else if (e.target.classList.contains('primary')) {
-        alert("Asw")
+        const keyword = document.querySelector(".flex-search-input").firstElementChild.value;
+        loadData(keyword);
     }
 })
