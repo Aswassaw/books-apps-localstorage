@@ -115,6 +115,11 @@ input {
   background-color: #563fa8;
 }
 
+.container-search {
+  display: flex;
+  margin-bottom: 20px;
+}
+
 .flex-search-input {
   flex-grow: 3;
 }

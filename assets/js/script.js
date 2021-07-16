@@ -27,7 +27,7 @@ function loadData(search = false) {
     // Memfilter hasil jika ada pencarian
     if (search) {
         allBookData = allBookData.filter((item) => {
-            return item.title === search;
+            return item.title.toLowerCase().includes(search.toLowerCase())
         })
     }
 
@@ -117,6 +117,12 @@ document.getElementById('form-add').addEventListener('submit', (e) => {
     document.getElementById('year').value = '';
 })
 
+// Button search diklik
+document.querySelector('.container-search').addEventListener('click', () => {
+    const keyword = document.querySelector(".flex-search-input").firstElementChild.value;
+    loadData(keyword);
+})
+
 // Sesuatu di dalam elemen .container-flex diklik
 document.querySelector('.container-flex').addEventListener('click', (e) => {
     // Tombol selesai atau belum selesai diklik
@@ -166,8 +172,5 @@ document.querySelector('.container-flex').addEventListener('click', (e) => {
                 );
             }
         })
-    } else if (e.target.classList.contains('primary')) {
-        const keyword = document.querySelector(".flex-search-input").firstElementChild.value;
-        loadData(keyword);
     }
 })
