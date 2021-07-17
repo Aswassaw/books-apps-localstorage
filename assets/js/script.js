@@ -22,7 +22,7 @@ function loadData(search = false) {
     // Cek dark mode
     const dark = document.body.classList.contains('dark-theme');
     // Mengambil semua data buku dari local storage
-    let allBookData = JSON.parse(localStorage.getItem('book-data'));
+    let allBookData = JSON.parse(localStorage.getItem('book-data')) || [];
 
     // Memfilter hasil jika ada pencarian
     if (search) {
@@ -33,6 +33,7 @@ function loadData(search = false) {
 
     let completeCount = 0;
     let uncompleteCount = 0;
+
     if (allBookData.length > 0) {
         allBookData = allBookData.reverse();
         allBookData.forEach((item) => {
