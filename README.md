@@ -1,4 +1,4 @@
 # Bookshelf Apps
-Aplikasi Pengelolaan Data Menggunakan DOM dan Web Storage.
+Aplikasi Pengelolaan Data Buku Menggunakan DOM dan Web Storage.
 
-Demo: %md <a href="https://bookshelf-andry.netlify.app/" target="_blank">Bookshelf Apps</a>
+Demo: [Books Apps](https://booksapps.netlify.app/)
