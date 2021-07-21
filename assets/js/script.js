@@ -9,6 +9,8 @@ window.addEventListener('load', () => {
         document.querySelector('footer').removeAttribute('hidden');
     }, 500);
     loadData()
+
+    document.querySelector('nav a').setAttribute('href', window.location.href);
 });
 
 // Load data buku
